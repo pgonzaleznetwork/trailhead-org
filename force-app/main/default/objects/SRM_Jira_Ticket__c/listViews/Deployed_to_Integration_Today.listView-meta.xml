@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Deployed_to_Integration_Today</fullName>
+    <columns>NAME</columns>
+    <columns>Title__c</columns>
+    <columns>Case_Subject__c</columns>
+    <columns>Owner__c</columns>
+    <columns>Rebased_By__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Approx_Deployment_Date__c</field>
+        <operation>equals</operation>
+        <value>THIS_MONTH</value>
+    </filters>
+    <label>Deployed to Production This Month</label>
+</ListView>

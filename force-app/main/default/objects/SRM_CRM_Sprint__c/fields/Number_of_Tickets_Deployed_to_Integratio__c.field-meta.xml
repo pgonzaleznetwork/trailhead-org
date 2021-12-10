@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Number_of_Tickets_Deployed_to_Integratio__c</fullName>
+    <externalId>false</externalId>
+    <label>Num. of Tickets Deployed to Integration</label>
+    <summaryFilterItems>
+        <field>SRM_Jira_Ticket__c.Deployed_to_Integration_Environment__c</field>
+        <operation>equals</operation>
+        <value>True</value>
+    </summaryFilterItems>
+    <summaryForeignKey>SRM_Jira_Ticket__c.CRM_Sprint__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

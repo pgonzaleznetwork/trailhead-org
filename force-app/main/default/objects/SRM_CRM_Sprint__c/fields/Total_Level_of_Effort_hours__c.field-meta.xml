@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Level_of_Effort_hours__c</fullName>
+    <externalId>false</externalId>
+    <label>Total Level of Effort (hours)</label>
+    <summarizedField>SRM_Jira_Ticket__c.Level_of_Effort_hours__c</summarizedField>
+    <summaryForeignKey>SRM_Jira_Ticket__c.CRM_Sprint__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

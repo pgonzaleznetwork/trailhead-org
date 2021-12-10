@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lightning</fullName>
+    <columns>NAME</columns>
+    <columns>Case_Number__c</columns>
+    <columns>Case_Subject__c</columns>
+    <columns>Status__c</columns>
+    <columns>Owner__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CRM_Sprint__c</field>
+        <operation>equals</operation>
+        <value>Lightning</value>
+    </filters>
+    <label>Lightning</label>
+</ListView>

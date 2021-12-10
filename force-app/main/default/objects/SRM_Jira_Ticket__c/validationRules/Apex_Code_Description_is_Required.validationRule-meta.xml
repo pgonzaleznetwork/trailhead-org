@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Apex_Code_Description_is_Required</fullName>
+    <active>false</active>
+    <description>Forces the user to include short and friendly description of the changes you made to Apex code when closing the deployment (if it has apex code, which is determined by a trigger).</description>
+    <errorConditionFormula>ISPICKVAL(Status__c, &quot;Deployed&quot;) &amp;&amp; Fire_New_Apex_Notification__c = TRUE &amp;&amp; ISBLANK(Friendly_description_of_Apex_changes__c)</errorConditionFormula>
+    <errorDisplayField>Friendly_description_of_Apex_changes__c</errorDisplayField>
+    <errorMessage>You must include a short and friendly description of the changes you made to Apex code.</errorMessage>
+</ValidationRule>

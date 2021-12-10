@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Friendly_description_of_Apex_changes__c</fullName>
+    <description>Enter a short and friendly description of what changes you made to Apex code. This will be included in an email notification that goes out to the CRM team when the deployment contains apex code.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter a short and friendly description of what changes you made to Apex code. This will be included in an email notification that goes out to the CRM team when the deployment contains apex code.</inlineHelpText>
+    <label>Friendly description of Apex changes</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

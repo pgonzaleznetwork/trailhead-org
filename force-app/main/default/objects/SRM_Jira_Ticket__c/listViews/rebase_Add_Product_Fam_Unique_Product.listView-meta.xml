@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>rebase_Add_Product_Fam_Unique_Product</fullName>
+    <columns>NAME</columns>
+    <columns>Case_Subject__c</columns>
+    <columns>Case__c</columns>
+    <columns>Owner__c</columns>
+    <columns>Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Case_Subject__c</field>
+        <operation>equals</operation>
+        <value>Sharing for Products?</value>
+    </filters>
+    <label>rebase:Add Product Fam Unique Product</label>
+</ListView>

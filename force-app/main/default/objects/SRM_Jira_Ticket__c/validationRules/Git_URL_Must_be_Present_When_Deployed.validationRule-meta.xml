@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Git_URL_Must_be_Present_When_Deployed</fullName>
+    <active>false</active>
+    <description>This validation rule prevents the user from closing the deployment if they don&apos;t have a Git Pull Request URL. In other words, the deployment cannot be marked as closed unless the metadata has been pushed to Git.</description>
+    <errorConditionFormula>ISPICKVAL( Status__c ,&quot;Deployed&quot;) &amp;&amp;  ISBLANK( Git_Pull_Request_URL__c )</errorConditionFormula>
+    <errorDisplayField>Git_Pull_Request_URL__c</errorDisplayField>
+    <errorMessage>You PABLO enter the Github Pull Request URL for this deployment. If you don&apos;t have one, then you must create a new branch with this metadata and pull it to the remote repository.</errorMessage>
+</ValidationRule>
