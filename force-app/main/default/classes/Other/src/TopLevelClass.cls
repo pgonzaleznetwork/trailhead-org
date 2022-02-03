@@ -5,8 +5,14 @@ public with sharing class TopLevelClass {
 
         RightClass right = new RightClass();
         LeftClass left = new LeftClass();
+        //new comment
 
         List<Lead> leads = [SELECT ProductInterest__c ,Connected_Org__c FROM Lead];
+        //this comment was added in the workspace..
 
+    }
+    
+    public static void doNothing(){
+        //nothing is happening here
     }
 }

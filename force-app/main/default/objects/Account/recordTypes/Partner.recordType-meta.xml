@@ -40,11 +40,7 @@
     <picklistValues>
         <picklist>CustomerPriority__c</picklist>
         <values>
-            <fullName>Critical</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Low</fullName>
+            <fullName>Lowest</fullName>
             <default>false</default>
         </values>
         <values>
@@ -53,10 +49,6 @@
         </values>
         <values>
             <fullName>New High</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Super High</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -188,6 +180,13 @@
         </values>
         <values>
             <fullName>Utilities</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>My_Broken_Picklist__c</picklist>
+        <values>
+            <fullName>ValueOne</fullName>
             <default>false</default>
         </values>
     </picklistValues>

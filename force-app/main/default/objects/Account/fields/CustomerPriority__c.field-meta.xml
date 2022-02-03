@@ -2,7 +2,8 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>CustomerPriority__c</fullName>
     <externalId>false</externalId>
-    <label>dev env</label>
+    <inlineHelpText>new help text</inlineHelpText>
+    <label>Customer Priority</label>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>
@@ -11,14 +12,9 @@
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
-                <fullName>Critical</fullName>
-                <default>false</default>
-                <label>Critical</label>
-            </value>
-            <value>
-                <fullName>Low</fullName>
-                <default>false</default>
-                <label>Low</label>
+                <fullName>Lowest</fullName>
+                <default>true</default>
+                <label>Lowest</label>
             </value>
             <value>
                 <fullName>Medium</fullName>
@@ -29,11 +25,6 @@
                 <fullName>New High</fullName>
                 <default>false</default>
                 <label>New High</label>
-            </value>
-            <value>
-                <fullName>Super High</fullName>
-                <default>false</default>
-                <label>Super High</label>
             </value>
         </valueSetDefinition>
     </valueSet>

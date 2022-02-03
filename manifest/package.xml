@@ -45,6 +45,12 @@
         <name>ValidationRule</name>
     </types>
     <types>
+        <members>*</members>
+        <name>Profile</name>
+    </types>
+    <types>
+        <members>*</members>
+        <members>Lead</members>
         <members>Account</members>
         <name>CustomObject</name>
     </types>
