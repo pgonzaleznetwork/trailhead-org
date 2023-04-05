@@ -6,6 +6,10 @@
     </types>
     <types>
         <members>*</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>*</members>
         <name>Report</name>
     </types>
     <types>
@@ -46,13 +50,50 @@
     </types>
     <types>
         <members>*</members>
+        <name>CustomLabel</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>Workflow</name>
+    </types>
+    <types>
+        <members>*</members>
         <name>Profile</name>
     </types>
     <types>
         <members>*</members>
+        <name>CustomMetadata</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>FlexiPage</name>
+    </types>
+     <types>
+        <members>*</members>
+        <name>Flow</name>
+    </types>
+    <types>
+        <members>*</members>
+        <members>Case</members>
         <members>Lead</members>
         <members>Account</members>
         <name>CustomObject</name>
+    </types>
+     <types>
+        <members>OmniChannel</members>
+        <name>Settings</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ExperienceBundle</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>Audience</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ManagedTopics</name>
     </types>
     <version>52.0</version>
 </Package>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Alternative_Address__c</fullName>
+    <description>description goes here</description>
+    <externalId>false</externalId>
+    <inlineHelpText>help text goes here</inlineHelpText>
+    <label>Alternative Address</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Address</type>
+</CustomField>

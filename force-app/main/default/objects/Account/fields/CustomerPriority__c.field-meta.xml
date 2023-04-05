@@ -2,11 +2,10 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>CustomerPriority__c</fullName>
     <externalId>false</externalId>
-    <inlineHelpText>new help text</inlineHelpText>
+    <inlineHelpText>This Field is used to trigger automatic notificationss to sla-emails@company.com</inlineHelpText>
     <label>Customer Priority</label>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>
-    <trackHistory>false</trackHistory>
     <type>Picklist</type>
     <valueSet>
         <valueSetDefinition>

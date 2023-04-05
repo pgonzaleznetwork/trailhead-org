@@ -3,10 +3,9 @@
     <fullName>oracleId__c</fullName>
     <externalId>false</externalId>
     <label>oracleId</label>
-    <length>80</length>
+    <length>90</length>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>
-    <trackHistory>false</trackHistory>
     <type>Text</type>
     <unique>false</unique>
 </CustomField>

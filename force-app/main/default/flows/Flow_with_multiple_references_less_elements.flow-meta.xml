@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <apiVersion>53.0</apiVersion>
+    <assignments>
+        <name>assignment_label_goes_here</name>
+        <label>assignment label goes here</label>
+        <locationX>474</locationX>
+        <locationY>460</locationY>
+        <assignmentItems>
+            <assignToReference>accountVariable.CustomerPriority__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Critical</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>accountVariable.Active__c</assignToReference>
+            <operator>Assign</operator>
+        </assignmentItems>
+        <connector>
+            <targetReference>update_records_label_goes_here</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>decision_label_goes_here</name>
+        <label>decision label goes here</label>
+        <locationX>168</locationX>
+        <locationY>469</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>decision_one</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>accountVariable.CustomerPriority__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Critical</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>assignment_label_goes_here</targetReference>
+            </connector>
+            <label>decision one</label>
+        </rules>
+        <rules>
+            <name>decision_two</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>accountVariable.CustomerPriority__c</leftValueReference>
+                <operator>EqualTo</operator>
+            </conditions>
+            <label>decision two</label>
+        </rules>
+    </decisions>
+    <dynamicChoiceSets>
+        <name>picklist_choice_name_goes_here</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>CustomerPriority__c</picklistField>
+        <picklistObject>Account</picklistObject>
+    </dynamicChoiceSets>
+    <environments>Default</environments>
+    <formulas>
+        <name>formula_name_goes_here</name>
+        <dataType>String</dataType>
+        <expression>{!accountVariable.CustomerPriority__c}</expression>
+    </formulas>
+    <interviewLabel>Flow with multiple references less elements {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Flow with multiple references less elements</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordUpdates>
+        <name>update_records_label_goes_here</name>
+        <label>update records label goes here</label>
+        <locationX>674</locationX>
+        <locationY>385</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>CustomerPriority__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Medium</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>condition for update</stringValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>CustomerPriority__c</field>
+            <value>
+                <stringValue>Lowest</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Name</field>
+        </inputAssignments>
+        <object>Account</object>
+    </recordUpdates>
+    <screens>
+        <name>screen_name_goes_here</name>
+        <label>screen name goes here</label>
+        <locationX>176</locationX>
+        <locationY>249</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>decision_label_goes_here</targetReference>
+        </connector>
+        <fields>
+            <name>text_label_goes_here</name>
+            <dataType>String</dataType>
+            <defaultValue>
+                <elementReference>accountVariable.CustomerPriority__c</elementReference>
+            </defaultValue>
+            <fieldText>text label goes here</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>display_text_goes_here</name>
+            <fieldText>&lt;p&gt;{!accountVariable.CustomerPriority__c}&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <start>
+        <locationX>50</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>screen_name_goes_here</targetReference>
+        </connector>
+    </start>
+    <status>InvalidDraft</status>
+    <textTemplates>
+        <name>template_template_goes_here</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text>&lt;p&gt;text of the template is right here. Field reference: {!accountVariable.CustomerPriority__c}&lt;/p&gt;</text>
+    </textTemplates>
+    <variables>
+        <name>accountVariable</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>Account</objectType>
+    </variables>
+</Flow>

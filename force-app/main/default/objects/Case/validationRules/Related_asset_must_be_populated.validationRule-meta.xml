@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Related_asset_must_be_populated</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISBLANK(AssetId ) &amp;&amp; ISBLANK( TEXT(SLAViolation__c ))</errorConditionFormula>
+    <errorMessage>Related asset must be populated</errorMessage>
+</ValidationRule>

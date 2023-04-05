@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
     <alerts>
+        <fullName>Email_Account_Owner</fullName>
+        <ccEmails>pablo.gonzalez@salto.io</ccEmails>
+        <description>Email Account Owner</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>pgonzaleznetwork@brave-raccoon-mm7crl.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Account_Integration_Disconencted</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_alert_linked_to_workflow</fullName>
+        <description>Email alert linked to workflow</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>pgonzaleznetwork@brave-raccoon-mm7crl.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/CommunityChangePasswordEmailTemplate</template>
+    </alerts>
+    <alerts>
         <fullName>account_alert</fullName>
         <ccEmails>emailone@gmail.com.notreal.invalid</ccEmails>
         <ccEmails>emailtwo@gmail.com.notreal.invalid</ccEmails>
@@ -17,6 +40,35 @@
         <senderType>CurrentUser</senderType>
         <template>unfiled$public/MarketingProductInquiryResponse</template>
     </alerts>
+    <fieldUpdates>
+        <fullName>Field_Update_linked_to_workflow</fullName>
+        <field>AccountNumber</field>
+        <name>Field Update linked to workflow</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_account_name_with_integration</fullName>
+        <field>Name</field>
+        <formula>Name + &quot; &quot; +TEXT(Integration_Status__c)</formula>
+        <name>Update account name with integration</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_oracle_Id</fullName>
+        <field>oracleId__c</field>
+        <formula>&quot;1234ORA&quot;</formula>
+        <name>Update oracle Id</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
     <fieldUpdates>
         <fullName>Updated_record_type</fullName>
         <field>RecordTypeId</field>
@@ -38,7 +90,6 @@
         <protected>false</protected>
         <reevaluateOnChange>false</reevaluateOnChange>
     </fieldUpdates>
-    
     <fieldUpdates>
         <fullName>update_priority_below</fullName>
         <field>CustomerPriority__c</field>
@@ -49,7 +100,78 @@
         <protected>false</protected>
         <reevaluateOnChange>false</reevaluateOnChange>
     </fieldUpdates>
-    
+    <outboundMessages>
+        <fullName>OB_message</fullName>
+        <apiVersion>54.0</apiVersion>
+        <endpointUrl>https://brave-raccoon-mm7crl-dev-ed.my.salesforce.com/04k/e?px2=01Q3h000000LceH</endpointUrl>
+        <fields>AccountSource</fields>
+        <fields>Id</fields>
+        <includeSessionId>true</includeSessionId>
+        <integrationUser>pgonzaleznetwork@brave-raccoon-mm7crl.com</integrationUser>
+        <name>OB message dif</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+    <rules>
+        <fullName>Time trigger workflow</fullName>
+        <active>false</active>
+        <formula>true</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>account_alert</name>
+                <type>Alert</type>
+            </actions>
+            <actions>
+                <name>update_priority_below</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <actions>
+                <name>You_have_a_new_task</name>
+                <type>Task</type>
+            </actions>
+            <timeLength>30</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>When integration is Disconnected</fullName>
+        <actions>
+            <name>Email_Account_Owner</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Integration_Status__c</field>
+            <operation>equals</operation>
+            <value>Disconnected</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>When integration is Established</fullName>
+        <actions>
+            <name>Update_oracle_Id</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Integration_Status__c</field>
+            <operation>equals</operation>
+            <value>Connection Established</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>When integration is new</fullName>
+        <actions>
+            <name>Update_account_name_with_integration</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>ISPICKVAL(Integration_Status__c,&quot;New&quot;)</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
     <rules>
         <fullName>When priority is high %26 low</fullName>
         <active>true</active>
@@ -83,9 +205,77 @@
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>
     <rules>
+        <fullName>Workflow with criteria</fullName>
+        <actions>
+            <name>OB_message</name>
+            <type>OutboundMessage</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Account.Name</field>
+            <operation>equals</operation>
+            <value>Salto</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.AboutMe</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <failedMigrationToolVersion>238.11.2</failedMigrationToolVersion>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Workflow with custom fields criteria</fullName>
+        <actions>
+            <name>Email_alert_linked_to_workflow</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>You_have_a_new_task</name>
+            <type>Task</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Account.Name</field>
+            <operation>equals</operation>
+            <value>Salto</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Gerry__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Workflow with single criteria</fullName>
+        <actions>
+            <name>Field_Update_linked_to_workflow</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Account.Name</field>
+            <operation>equals</operation>
+            <value>Salto</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
         <fullName>normal name _</fullName>
         <active>false</active>
         <formula>NOT(ISBLANK(TEXT(CustomerPriority__c)))</formula>
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>
+    <tasks>
+        <fullName>You_have_a_new_task</fullName>
+        <assignedTo>pgonzaleznetwork@brave-raccoon-mm7crl.com</assignedTo>
+        <assignedToType>user</assignedToType>
+        <description>Task linked to workflow</description>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>You have a new task</subject>
+    </tasks>
 </Workflow>

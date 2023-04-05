@@ -8,5 +8,12 @@
   "name": "trailhead-org",
   "namespace": "",
   "sfdcLoginUrl": "https://login.salesforce.com",
-  "sourceApiVersion": "52.0"
+  "sourceApiVersion": "52.0",
+  "replacements": [
+    {
+      "filename": "force-app/main/default/classes/BatchApexRecipes.cls",
+      "stringToReplace": "SELECT Id, Name FROM Account",
+      "replaceWithEnv": "SELECT Id, Name FROM Account LIMIT 100"  
+    }
+  ]
 }

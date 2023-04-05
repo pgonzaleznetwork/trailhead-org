@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Only_admin_can_edit_account_number</fullName>
+    <active>true</active>
+    <errorConditionFormula>$User.Id = &apos;0053h000002JF4c&apos; &amp;&amp; ISCHANGED( AccountNumber )</errorConditionFormula>
+    <errorMessage>Only the admin can edit the account number</errorMessage>
+</ValidationRule>

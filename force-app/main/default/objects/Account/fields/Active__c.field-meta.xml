@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Active__c</fullName>
+    <description>New description</description>
     <externalId>false</externalId>
     <label>Active</label>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>
-    <trackHistory>false</trackHistory>
     <type>Picklist</type>
     <valueSet>
         <valueSetDefinition>
@@ -24,6 +24,11 @@
                 <fullName>Maybe</fullName>
                 <default>false</default>
                 <label>Maybe</label>
+            </value>
+            <value>
+                <fullName>Salto</fullName>
+                <default>false</default>
+                <label>Salto</label>
             </value>
         </valueSetDefinition>
     </valueSet>

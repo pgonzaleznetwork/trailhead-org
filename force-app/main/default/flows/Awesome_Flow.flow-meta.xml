@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>call_apex</name>
+        <label>call apex</label>
+        <locationX>176</locationX>
+        <locationY>158</locationY>
+        <actionName>TopLevelClass</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>Processing_to_another_flow</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+    </actionCalls>
+    <apiVersion>53.0</apiVersion>
+    <interviewLabel>Awesome Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Awesome Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>call_apex</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <subflows>
+        <name>Processing_to_another_flow</name>
+        <label>Processing to another flow</label>
+        <locationX>176</locationX>
+        <locationY>278</locationY>
+        <flowName>Flow_used_everywhere</flowName>
+    </subflows>
+</Flow>

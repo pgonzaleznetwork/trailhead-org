@@ -1,9 +1,9 @@
 trigger AccountsTrigger on Account (after delete, after insert, after update, after undelete, before delete, before insert, before update) {
    
     if(trigger.isBefore){
-        System.debug('Before trigger');
-        Boolean value1 = StaticTest.staticBoolean;
-        System.debug('Value1 '+value1);
+    
+        
+        
         
     }
     
@@ -14,11 +14,21 @@ trigger AccountsTrigger on Account (after delete, after insert, after update, af
     }
     
     if(trigger.isBefore && trigger.isInsert){
-        AccountTriggerHandler.handleBeforeInsert(trigger.new);
+        Account a = trigger.new[0];
+        a.addError('Error from apex!');
+        //AccountTriggerHandler.handleBeforeInsert(trigger.new);
     }
     
     if(trigger.isBefore && trigger.isUpdate){
-        AccountTriggerHandler.handleBeforeUpdate(trigger.oldMap,trigger.newMap);
+        
+       // update [SELECT Id FROM Account WHERE Id = :trigger.new[0].Id];
+    }
+    
+    if(trigger.isAfter && trigger.isUpdate){
+        	
+       
+       
+        
     }
       
 }

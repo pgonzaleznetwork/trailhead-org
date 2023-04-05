@@ -189,6 +189,21 @@
         </values>
     </picklistValues>
     <picklistValues>
+        <picklist>Integration_Status__c</picklist>
+        <values>
+            <fullName>Connection Established</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disconnected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>My_Broken_Picklist__c</picklist>
         <values>
             <fullName>ValueOne</fullName>
@@ -280,6 +295,25 @@
         </values>
     </picklistValues>
     <picklistValues>
+        <picklist>UI_Mode__c</picklist>
+        <values>
+            <fullName>Dark</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Light</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Matrix</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Normal</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>UpsellOpportunity__c</picklist>
         <values>
             <fullName>Maybe</fullName>
@@ -291,6 +325,17 @@
         </values>
         <values>
             <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Users__c</picklist>
+        <values>
+            <fullName>User1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>User2</fullName>
             <default>false</default>
         </values>
     </picklistValues>

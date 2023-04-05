@@ -3,5 +3,5 @@
     <fullName>Priority_must_be_set</fullName>
     <active>true</active>
     <errorConditionFormula>ISPICKVAL(CustomerPriority__c,&quot;High&quot;) &amp;&amp;  ISBLANK(TEXT(Type))</errorConditionFormula>
-    <errorMessage>invalid data</errorMessage>
+    <errorMessage>Customer priority cannot be High</errorMessage>
 </ValidationRule>

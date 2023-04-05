@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Incident</fullName>
+    <active>true</active>
+    <label>Incident</label>
+    <picklistValues>
+        <picklist>Integration_Status__c</picklist>
+        <values>
+            <fullName>Editable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not integrated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Visible</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>
