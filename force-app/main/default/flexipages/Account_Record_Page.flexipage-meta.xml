@@ -224,7 +224,7 @@
                     <criteria>
                         <leftValue>{!Record.CustomerPriority__c}</leftValue>
                         <operator>EQUAL</operator>
-                        <rightValue>High</rightValue>
+                        <rightValue>Lowest</rightValue>
                     </criteria>
                 </visibilityRule>
             </componentInstance>
