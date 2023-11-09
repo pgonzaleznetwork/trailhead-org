@@ -60,7 +60,6 @@
         <picklistField>CustomerPriority__c</picklistField>
         <picklistObject>Account</picklistObject>
     </dynamicChoiceSets>
-    <environments>Default</environments>
     <formulas>
         <name>formula_name_goes_here</name>
         <dataType>String</dataType>

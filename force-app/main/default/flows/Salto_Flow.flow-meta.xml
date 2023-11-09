@@ -2,7 +2,6 @@
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>56.0</apiVersion>
     <description>This is a brand new version</description>
-    <environments>Default</environments>
     <interviewLabel>Salto Flow {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Salto Flow (version 2)</label>
     <processMetadataValues>

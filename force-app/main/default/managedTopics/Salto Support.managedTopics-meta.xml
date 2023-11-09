@@ -16,4 +16,20 @@
         <position>0</position>
         <topicDescription> </topicDescription>
     </managedTopic>
+    <managedTopic>
+        <fullName>Salto Support.Navigational:AnotherNavTopic</fullName>
+        <managedTopicType>Navigational</managedTopicType>
+        <name>AnotherNavTopic</name>
+        <parentName></parentName>
+        <position>1</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>Salto Support.Navigational:NavTopic</fullName>
+        <managedTopicType>Navigational</managedTopicType>
+        <name>NavTopic</name>
+        <parentName></parentName>
+        <position>0</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
 </ManagedTopics>

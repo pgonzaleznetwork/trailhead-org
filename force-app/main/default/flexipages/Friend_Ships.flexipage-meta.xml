@@ -4,7 +4,6 @@
         <itemInstances>
             <componentInstance>
                 <componentName>boatSearch</componentName>
-                <identifier>boatSearch</identifier>
             </componentInstance>
         </itemInstances>
         <name>region1</name>
@@ -18,7 +17,6 @@
         <itemInstances>
             <componentInstance>
                 <componentName>boatMap</componentName>
-                <identifier>boatMap</identifier>
             </componentInstance>
         </itemInstances>
         <name>region3</name>

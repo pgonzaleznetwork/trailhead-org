@@ -34,7 +34,7 @@
                 <leftValueReference>accountVariable.CustomerPriority__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>Critical</stringValue>
+                    <stringValue>Medium</stringValue>
                 </rightValue>
             </conditions>
             <connector>
@@ -60,7 +60,6 @@
         <picklistField>CustomerPriority__c</picklistField>
         <picklistObject>Account</picklistObject>
     </dynamicChoiceSets>
-    <environments>Default</environments>
     <formulas>
         <name>formula_name_goes_here</name>
         <dataType>String</dataType>
@@ -177,7 +176,7 @@
             <targetReference>screen_name_goes_here</targetReference>
         </connector>
     </start>
-    <status>Active</status>
+    <status>Obsolete</status>
     <textTemplates>
         <name>template_template_goes_here</name>
         <isViewedAsPlainText>false</isViewedAsPlainText>

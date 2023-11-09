@@ -74,7 +74,6 @@
         <picklistField>Type</picklistField>
         <picklistObject>Case</picklistObject>
     </dynamicChoiceSets>
-    <environments>Default</environments>
     <formulas>
         <name>User_First_Name_Formula</name>
         <dataType>String</dataType>
@@ -506,7 +505,6 @@
         <showFooter>true</showFooter>
         <showHeader>true</showHeader>
     </screens>
-    <sourceTemplate>setup_service_experience__Create_Case</sourceTemplate>
     <stages>
         <name>Case_Details_Stage</name>
         <isActive>true</isActive>

@@ -14,7 +14,6 @@
             </value>
         </assignmentItems>
     </assignments>
-    <environments>Default</environments>
     <interviewLabel>NetSuite Flow {!$Flow.CurrentDateTime}</interviewLabel>
     <label>NetSuite Flow</label>
     <processMetadataValues>

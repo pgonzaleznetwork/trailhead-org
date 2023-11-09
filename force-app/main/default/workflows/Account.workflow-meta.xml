@@ -220,7 +220,6 @@
             <field>User.AboutMe</field>
             <operation>notEqual</operation>
         </criteriaItems>
-        <failedMigrationToolVersion>238.11.2</failedMigrationToolVersion>
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>
     <rules>

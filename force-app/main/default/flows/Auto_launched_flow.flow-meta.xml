@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>54.0</apiVersion>
-    <environments>Default</environments>
     <interviewLabel>Auto launched flow {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Auto launched flow</label>
     <processMetadataValues>

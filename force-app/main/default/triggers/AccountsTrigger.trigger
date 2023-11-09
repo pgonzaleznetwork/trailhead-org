@@ -15,7 +15,7 @@ trigger AccountsTrigger on Account (after delete, after insert, after update, af
     
     if(trigger.isBefore && trigger.isInsert){
         Account a = trigger.new[0];
-        a.addError('Error from apex!');
+        //a.addError('Error from apex!');
         //AccountTriggerHandler.handleBeforeInsert(trigger.new);
     }
     

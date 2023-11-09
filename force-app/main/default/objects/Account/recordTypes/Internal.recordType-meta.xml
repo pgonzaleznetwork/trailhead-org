@@ -38,6 +38,21 @@
         </values>
     </picklistValues>
     <picklistValues>
+        <picklist>Badge_Size__c</picklist>
+        <values>
+            <fullName>Large</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Small</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>CustomerPriority__c</picklist>
         <values>
             <fullName>Lowest</fullName>
@@ -49,6 +64,21 @@
         </values>
         <values>
             <fullName>New High</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>FLS_Values__c</picklist>
+        <values>
+            <fullName>Disabled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Read</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Read Only</fullName>
             <default>false</default>
         </values>
     </picklistValues>

@@ -1,0 +1,14 @@
+Creating "Other" folder with 90 files and 23 tests
+Creating "trigger_handlers" folder with 5 files and 0 tests
+Creating "batch_apex" folder with 3 files and 1 tests
+Creating "SRM" folder with 21 files and 8 tests
+Creating "TriggerUtils" folder with 1 files and 0 tests
+Creating "Utils" folder with 1 files and 0 tests
+Creating "fflib" folder with 57 files and 26 tests
+{
+  "status": 0,
+  "result": {
+    "path": "/Users/pgonzalez/Documents/apps/sfplugin/dxfolders/src/commands/dxdir/arrange.ts"
+  },
+  "warnings": []
+}

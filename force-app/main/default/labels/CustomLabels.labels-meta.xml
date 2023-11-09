@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
     <labels>
+        <fullName>Admin_User</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Admin User</shortDescription>
+        <value>0053h000002JF4c</value>
+    </labels>
+    <labels>
+        <fullName>Flow_Endpoint</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Flow Endpoint</shortDescription>
+        <value>/v33.0/actions/custom/flow/Flow_used_everywhere</value>
+    </labels>
+    <labels>
         <fullName>Priority_Email</fullName>
         <language>en_US</language>
         <protected>true</protected>
@@ -131,19 +145,5 @@
         <protected>true</protected>
         <shortDescription>personal template name</shortDescription>
         <value>personal template</value>
-    </labels>
-    <labels>
-        <fullName>Admin_User</fullName>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>Admin User</shortDescription>
-        <value>0053h000002JF4c</value>
-    </labels>
-    <labels>
-        <fullName>Flow_Endpoint</fullName>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>Flow Endpoint</shortDescription>
-        <value>/v33.0/actions/custom/flow/Flow_used_everywhere</value>
     </labels>
 </CustomLabels>

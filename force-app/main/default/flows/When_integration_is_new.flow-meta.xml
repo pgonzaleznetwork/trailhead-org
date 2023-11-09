@@ -9,7 +9,6 @@ Workflow rule description: &quot;</description>
         <expression>$Record.Name + &quot; &quot; +TEXT($Record.Integration_Status__c)</expression>
     </formulas>
     <label>When integration is new</label>
-    <migratedFromWorkflowRuleName>When integration is new</migratedFromWorkflowRuleName>
     <processMetadataValues>
         <name>CanvasMode</name>
         <value>
@@ -37,7 +36,6 @@ Workflow rule description: &quot;</description>
             <targetReference>mainUpdate</targetReference>
         </connector>
         <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
-        <filterFormula>ISPICKVAL({!$Record.Integration_Status__c},&quot;New&quot;)</filterFormula>
         <object>Account</object>
         <recordTriggerType>CreateAndUpdate</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>

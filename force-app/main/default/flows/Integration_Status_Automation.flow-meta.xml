@@ -103,7 +103,6 @@
             <label>Disconnected</label>
         </rules>
     </decisions>
-    <environments>Default</environments>
     <formulas>
         <name>AccountnamewithIntegrationStatus</name>
         <dataType>String</dataType>
@@ -143,7 +142,6 @@
         <connector>
             <targetReference>What_is_the_Integration_Status</targetReference>
         </connector>
-        <filterFormula>ISCHANGED({!$Record.Integration_Status__c})</filterFormula>
         <object>Account</object>
         <recordTriggerType>CreateAndUpdate</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>

@@ -13,7 +13,6 @@
                     <value>Case._LightningUpdateCase</value>
                 </componentInstanceProperties>
                 <componentName>console:relatedRecord</componentName>
-                <identifier>leftsidebar_cmp1_relatedrecord</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -27,7 +26,6 @@
                     <value>Contact._LightningRelatedContact</value>
                 </componentInstanceProperties>
                 <componentName>console:relatedRecord</componentName>
-                <identifier>leftsidebar_cmp2_relatedrecord</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -41,7 +39,6 @@
                     <value>Cases</value>
                 </componentInstanceProperties>
                 <componentName>force:relatedListSingleContainer</componentName>
-                <identifier>leftsidebar_cmp3_relatedlist</identifier>
             </componentInstance>
         </itemInstances>
         <name>leftsidebar</name>
@@ -60,7 +57,6 @@
                     <value>1</value>
                 </componentInstanceProperties>
                 <componentName>force:highlightsPanel</componentName>
-                <identifier>force_highlightsPanel</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -70,7 +66,6 @@
                     <value>tabs</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:tabset</componentName>
-                <identifier>flexipage_tabset</identifier>
             </componentInstance>
         </itemInstances>
         <name>main</name>
@@ -81,7 +76,6 @@
         <itemInstances>
             <componentInstance>
                 <componentName>support:milestones</componentName>
-                <identifier>support_milestones</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -91,13 +85,11 @@
                     <value>setup_service_experience_SupportFlows</value>
                 </componentInstanceProperties>
                 <componentName>lbpm:actionList</componentName>
-                <identifier>lbpm_guidedactionlist</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
             <componentInstance>
                 <componentName>forceKnowledge:articleSearchDesktop</componentName>
-                <identifier>forceKnowledge_articleSearchDesktop</identifier>
             </componentInstance>
         </itemInstances>
         <name>rightsidebar</name>
@@ -120,7 +112,6 @@
                     <value>Standard.Tab.feed</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:tab</componentName>
-                <identifier>feedTab</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -138,7 +129,6 @@
                     <value>Standard.Tab.relatedLists</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:tab</componentName>
-                <identifier>relatedTab</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -152,7 +142,6 @@
                     <value>Standard.Tab.detail</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:tab</componentName>
-                <identifier>detailTab</identifier>
             </componentInstance>
         </itemInstances>
         <name>tabs</name>
@@ -163,7 +152,6 @@
         <itemInstances>
             <componentInstance>
                 <componentName>forceChatter:recordFeedContainer</componentName>
-                <identifier>forceChatter_recordFeedContainer</identifier>
             </componentInstance>
         </itemInstances>
         <name>feedTabContent</name>
@@ -174,7 +162,6 @@
         <itemInstances>
             <componentInstance>
                 <componentName>force:relatedListContainer</componentName>
-                <identifier>force_relatedListContainer</identifier>
             </componentInstance>
         </itemInstances>
         <name>relatedTabContent</name>
@@ -185,7 +172,6 @@
         <itemInstances>
             <componentInstance>
                 <componentName>force:detailPanel</componentName>
-                <identifier>force_detailPanel</identifier>
             </componentInstance>
         </itemInstances>
         <name>detailTabContent</name>

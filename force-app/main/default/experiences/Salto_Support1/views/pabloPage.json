@@ -1,6 +1,7 @@
 {
   "appPageId" : "0b2b895d-a677-4e15-996a-977ad2c893e3",
   "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
   "id" : "ebb8bd88-0f77-4c35-88cf-d483fba518b9",
   "label" : "PabloPage",
   "regions" : [ {
