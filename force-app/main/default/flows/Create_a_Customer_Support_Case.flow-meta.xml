@@ -483,13 +483,7 @@
         <label>Confirm Customer Details</label>
         <stageOrder>10</stageOrder>
     </stages>
-    <start>
-        <locationX>50</locationX>
-        <locationY>50</locationY>
-        <connector>
-            <targetReference>Assign_Stage_1</targetReference>
-        </connector>
-    </start>
+
     <status>Active</status>
     <textTemplates>
         <name>Case_Created_Script_Template</name>
