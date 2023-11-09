@@ -2,7 +2,7 @@ public with sharing class BoatDataService {
 
     public static final String LENGTH_TYPE = 'Length'; 
     public static final String PRICE_TYPE = 'Price'; 
-    public static final String TYPE_TYPE = 'Type'; 
+    public static final String TYPE_TYPE = 'TypeB'; 
 
     @AuraEnabled(cacheable=true)
     public static List<Boat__c> getBoats(String boatTypeId) {
@@ -84,7 +84,7 @@ public with sharing class BoatDataService {
         ];
     }
 
-    // Assume this may be an API that return this data, not a SOQL query
+    // Assume this may be an API that return this data, not a SOQL queryB
     @AuraEnabled(cacheable=true)
     public static String getBoatsByLocation(Decimal latitude, Decimal longitude, String boatTypeId) {
         // Without an explicit boatTypeId, the full list is desired
@@ -94,6 +94,10 @@ public with sharing class BoatDataService {
         }
         query += 'ORDER BY DISTANCE(Geolocation__c, GEOLOCATION(:latitude, :longitude), \'mi\') LIMIT 10';
         return JSON.serialize(Database.query(query));
+    }
+
+    private static void methodInVsCode(){
+        System.debug('hey');
     }
     
 }
